@@ -56,6 +56,6 @@ body_text.grid(row=4, column=1, sticky=W)
 Button(text="Отправить!", command=send_email).grid(row=5, column=1, sticky=W)
 
 result_label = Label(text='')
-result_label.grid(row=5, column=1, sticky=W)
+result_label.grid(row=6, column=1, sticky=W)
 
 window.mainloop()
