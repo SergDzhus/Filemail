@@ -4,11 +4,11 @@ from tkinter import *
 
 
 def send_email():
-    sender_email = 'pythontest1234@yandex.ru'
-    recipient_email = 'qqq968@yandex.ru'
-    password = 'uxezbjsxmdzqbbqp'
-    subject = 'Проверка связи'
-    body = 'Hi, from Python!'
+    sender_email = sender_email_entry.get()
+    recipient_email = recipient_email_entry.get()
+    password = password_entry.get()
+    subject = subject_entry.get()
+    body = body_text.get(1.0, END)
 
     msg = EmailMessage()
     msg.set_content(body)
