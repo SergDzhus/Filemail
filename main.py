@@ -22,9 +22,9 @@ def send_email():
         server = smtplib.SMTP_SSL('smtp.yandex.ru', 465)
         server.login(sender_email, password)
         server.send_message(msg)
-        print('Mail sent!')
+        result_label.config(text='Mail sent!')
     except Exception as e:
-        print(f'Error - {e}')
+        result_label.config(text=f'Error - {e}')
     finally:
         if server:
             server.quit()
@@ -49,7 +49,7 @@ Label(text='Тема письма:').grid(row=3, column=0, sticky=W)
 subject_entry = Entry()
 subject_entry.grid(row=3, column=1, sticky=W)
 
-Label(text='Cjj,otybt:').grid(row=4, column=0, sticky=W)
+Label(text='Текст письма:').grid(row=4, column=0, sticky=W)
 body_text = Text(width=45, height=10)
 body_text.grid(row=4, column=1, sticky=W)
 
